@@ -33,6 +33,7 @@ Optional: pre-sets can be found here: https://github.com/DevOpsPlayground/terraf
 For custom modules there are 4 .tf files needed:
 
 ## Variables.tf - example:
+```
 variable "position" {
   type = object({
 	x = number
@@ -52,8 +53,10 @@ variable "dimensions" {
 variable "material" {
   type = string
 }
+```
 
 ## Main.tf:
+```
 resource "minecraft_block" "cube" {
 
 	// loop over the blocks and set the index as the id
@@ -69,8 +72,10 @@ resource "minecraft_block" "cube" {
 	z = each.value.z
   }
 }
+```
 
 ## Locals.tf - example:
+```
 locals {
   // range(start, end) => returns a list of values from start to end
   x_values = range(var.position.x, var.position.x + var.dimensions.width)
@@ -85,8 +90,10 @@ locals {
   blocks   = [for coordinate in local.coordinates : zipmap(["x", "y", "z"], coordinate)]
   material = length(regexall("^[a-z]+:[a-z]+$", var.material)) > 0 ? var.material : format("%s:%s", "minecraft", var.material)
 }
+```
 
 ## Provide.tf:
+```
 terraform {
   required_providers {
 	minecraft = {
@@ -95,6 +102,7 @@ terraform {
 	}
   }
 }
+```
 
 ## Advice 
 Most important are variables and locals.
@@ -102,6 +110,7 @@ Variables are used to store information to be referenced and manipulated in a co
 Locals are used to set the rules of how a provider builds in minecraft.
 
 ## How it will looks like when you are using this module in your main.tf:
+```
  module "name" {
    source = "./cube"
 
@@ -119,6 +128,7 @@ Locals are used to set the rules of how a provider builds in minecraft.
  	height = 2
    }
  }
+```
 
 ## Advice
 If you need to have a block with 2 words use underscore when you write a material example: material = "smooth_stone".

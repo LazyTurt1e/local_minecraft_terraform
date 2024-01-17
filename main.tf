@@ -26,20 +26,6 @@
 #   }
 # }
 
-# module "pig" { 
-#  source = "./entity"
-
-#  entity = "pig"
-  
-#  amount=3
-
-#    x = 224,
-#    y = 81,
-#    z = 2024
-#   }
-
-# }
-
 module "floor_for_test" {
   source = "./cube"
 

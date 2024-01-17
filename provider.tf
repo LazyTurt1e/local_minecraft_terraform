@@ -9,6 +9,6 @@ terraform {
 
 // Configure the provider with the RCON details of the Minecraft server
 provider "minecraft" {
-  address  = "3.79.241.137:25575"
+  address  = "localhost:25575"
   password = "Worlt"
 }

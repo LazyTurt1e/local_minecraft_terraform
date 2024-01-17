@@ -32,14 +32,14 @@ module "floor_for_test" {
   material = "smooth_stone"
 
   position = {
-    x = 220,
-    y = 69,
-    z = 2020
+    x = 60,
+    y = 70,
+    z = -16
   }
 
   dimensions = {
-    width  = 10,
-    length = 10,
+    width  = 2,
+    length = 2,
     height = 1
   }
 }

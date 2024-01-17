@@ -18,6 +18,12 @@ https://minecraft.fandom.com/wiki/Tutorials/Setting_up_a_server
 2.start minecraft docker server(11)
 3.Rcon can be found and changed in files srv/minecraft/server.properties
 
+### Hint
+When you making server besides setting password and allowing RCON you need open port 25565 and 25575 with this command:
+```
+docker container create --publish 25565:25565/tcp --publish 25575:25575/tcp --name "server" --env RAM=2G sirplexus/minecraft-server-standalone
+```
+
 ## To make it easier for docker usage - Docker Desktop 
 https://docs.docker.com/get-docker/
 

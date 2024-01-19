@@ -48,10 +48,10 @@ https://registry.terraform.io/providers/HashiCraft/minecraft/latest/docs
 1. In Visual Studio, make main.tf and provider.tf
 
 
-2.in provider.tf set minecraft provider
+2. In provider.tf set minecraft provider
 
 
-3. in main.tf modules or resources
+3. In main.tf modules or resources
 
 
 Optional: The module cube can be found here: https://github.com/HashiCraft/terraform-provider-minecraft/tree/main/examples/full

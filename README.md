@@ -14,8 +14,11 @@ https://docs.docker.com/engine/install/
 
 ## Minecraft server on docker 
 https://minecraft.fandom.com/wiki/Tutorials/Setting_up_a_server
+
 1.check if Java is installed(4.1, 5.1, 6.1)
+
 2.start minecraft docker server(11)
+
 3.Rcon can be found and changed in files srv/minecraft/server.properties
 
 ### Hint
@@ -29,10 +32,15 @@ https://docs.docker.com/get-docker/
 
 ## Check minecraft terraform HashiCraft provider:
 https://registry.terraform.io/providers/HashiCraft/minecraft/latest/docs
+
 1.in Visual Studio make main.tf and provider.tf 
+
 2.in provider.tf set minecraft provider 
+
 3.in main.tf modules or resources 
+
 Optional: module cube can be found here: https://github.com/HashiCraft/terraform-provider-minecraft/tree/main/examples/full
+
 Optional: pre-sets can be found here: https://github.com/DevOpsPlayground/terraform_minecraft_playground
 
 # Hint: 
@@ -112,7 +120,9 @@ terraform {
 
 ## Advice 
 Most important are variables and locals.
+
 Variables are used to store information to be referenced and manipulated in a computer program.
+
 Locals are used to set the rules of how a provider builds in minecraft.
 
 ## How it will looks like when you are using this module in your main.tf:
@@ -139,5 +149,4 @@ Locals are used to set the rules of how a provider builds in minecraft.
 ## Advice
 If you need to have a block with 2 words use underscore when you write a material example: material = "smooth_stone".
 
-If you need those correct naming or/and add-ons that can be applied on spesific block you can look them up on wiki websites like this one:
-https://minecraft.fandom.com/wiki/Note_Block
+If you need those correct naming or/and add-ons that can be applied on spesific block you can look them up on wiki websites like this one: https://minecraft.fandom.com/wiki/Note_Block

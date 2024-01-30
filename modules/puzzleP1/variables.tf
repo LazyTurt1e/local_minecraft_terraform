@@ -6,14 +6,6 @@ variable "position" {
   })
 }
 
-variable "dimensions" {
-  type = object({
-    width  = number
-    length = number
-    height = number
-  })
-}
-
 variable "material" {
   type = string
 }

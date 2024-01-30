@@ -1,5 +1,4 @@
-resource "minecraft_block" "cube" {
-
+resource "minecraft_block" "string" {
     // loop over the blocks and set the index as the id
   for_each = { for i, o in local.blocks : "block-${i}" => o }
 
